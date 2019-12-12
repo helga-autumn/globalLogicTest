@@ -52,11 +52,6 @@ def enter_text(text):
                 # set current position into "shift" button
                 current_pos_i = next_pos_i
                 current_pos_j = next_pos_j
-
-                # go back to character that should be uppercase
-                next_pos = get_character_index(char)
-                next_pos_i = next_pos[0]
-                next_pos_j = next_pos[1]
             else:
                 next_pos = get_character_index(char)
                 next_pos_i = next_pos[0]
@@ -86,7 +81,7 @@ def get_character_index(char):
         else:
             continue
 
-    if result[0] == -1 & result[1] == -1:
+    if result[0] == -1 and result[1] == -1:
         raise Exception("Only symbols from defined keyboard are allowed")
     else:
         return result
